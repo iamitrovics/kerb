@@ -1,0 +1,34 @@
+.contact-info {
+
+    h2 {
+        color: $white !important;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-family: $lato-bold;
+        font-size: 1.250em;
+        line-height: 1.3;
+        color: $white;
+        margin-bottom: 10px;
+
+        @include media-breakpoint-only(md) {
+            font-size: 1.13em;
+        }
+    }
+
+    a {
+        @include yellow-btn;
+        width: auto;
+        display: inline-block;
+        padding: 26px;
+        margin-top: 30px;
+        color: $white;
+        border: 1px solid $white;
+        background: transparent;
+
+        &:hover {
+            border: 1px solid #252525;
+        }
+    }
+}

@@ -1,0 +1,137 @@
+// Import fonts and fonts variables
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url('../fonts/Lato-Black.woff2') format('woff2'),
+        url('../fonts/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato Semibold';
+    src: url('../fonts/Lato-Semibold.woff2') format('woff2'),
+        url('../fonts/Lato-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato Italic';
+    src: url('../fonts/Lato-Italic.woff2') format('woff2'),
+        url('../fonts/Lato-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato Light';
+    src: url('../fonts/Lato-Light.woff2') format('woff2'),
+        url('../fonts/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+$lato-bold: 'Lato Bold';
+$lato-semi: 'Lato Semibold';
+$lato-reg: 'Lato Regular';
+$lato-black: 'Lato Black';
+$lato-italic: 'Lato Italic';
+$lato-light: 'Lato Light';
+
+$font-main: 'Lato Regular';
+$font-heading: 'Lato Bold';
+
+
+
+body { 
+	font: {
+		size:$base-size;
+		family: $font-main;
+	}
+	-webkit-text-size-adjust: 100%;  //fix for iOS 
+    color: #777;
+}
+
+p {
+    font-family: $font-main;
+    font-size: 1.125em;
+    line-height: 1.66;
+    color: #777;
+    margin-bottom: 20px;
+    font-weight: normal;
+    a {
+        &:hover {
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+// reset
+a {
+    @include animate-fade;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a, button, input, textarea {
+    &:focus {
+        outline: none!important;
+    }
+}
+
+address {
+    margin:0px;
+    padding:0px;
+}
+iframe {
+    border:0;
+}
+
+i {
+    font-style: normal;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: $yellow;
+  color: #fff;
+}
+
+::selection {
+  background: $yellow;
+  color: #fff;
+}
