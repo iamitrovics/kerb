@@ -110,6 +110,14 @@ $container = get_theme_mod( 'understrap_container_type' );
                                             <?php the_sub_field('embedded_code'); ?>
                                         </div>
 
+                                    <?php elseif( get_row_layout() == 'quote_cta' ): ?>
+
+                                        <div class="quote-cta--single">
+                                            <span class="title"><?php the_sub_field('cta_title'); ?></span>
+                                            <a href="#bottom-form" class="btn-cta"><?php the_sub_field('button_label'); ?></a>
+                                        </div>
+                                        <!-- // single  -->                                             
+
                                     <?php elseif( get_row_layout() == 'accordion' ): ?>
 
                                         <div class="content__accordion">
@@ -162,6 +170,13 @@ $container = get_theme_mod( 'understrap_container_type' );
         <!-- /.container -->
     </div>
     <!-- /#blog-page -->
+
+    <div id="bottom-form">
+        <div class="container">
+            <?php get_template_part( 'part-form' ); ?>
+        </div>
+    </div>
+    <!-- // bottom form  -->
 
 <?php
 get_footer();?>

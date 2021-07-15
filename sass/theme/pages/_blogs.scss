@@ -487,11 +487,14 @@ h1 {
             margin-bottom: 20px;
             margin-left: auto;
             margin-right: auto;
-
+            text-align: center;
             img {
                 width: 100%;
                 display: block;
                 @include animate-fade;
+            }
+            .caption {
+                padding-top: 10px;
             }
         }
 
@@ -859,5 +862,41 @@ h1 {
         &.current {
             color:$yellow;
         }
+    }
+}
+
+/// Form
+#bottom-form {
+    background:$black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h2 {
+        color:$yellow;
+    }
+}
+
+// CTA
+.quote-cta--single {
+    background: $black;
+    padding:30px;
+    text-align: center;
+    span.title {
+        display: block;
+        color:$white;
+        margin-right: 40px;
+        font-size: 42px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+            margin-bottom: 20px;
+            margin-right: 0px;
+        }
+    }
+    a.btn-cta {
+        @include yellow-btn;
+        width: 280px;
+        margin:0px auto;
     }
 }
