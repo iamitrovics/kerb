@@ -178,6 +178,8 @@
             });
           });  
 
+        $('.full-content a').attr("target","_blank");
+
        /* $('#city-reviews-slider').slick({
             infinite: false,
             speed: 300,
