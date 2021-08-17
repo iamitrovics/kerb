@@ -15,9 +15,11 @@
         margin-bottom: 30px;
 
         .star-area {
-            width: 110px;
-            margin: 0 auto;
+            text-align: center;
             margin-bottom: 30px;
+            i {
+                color: $yellow;
+            }
         }
     }
 }

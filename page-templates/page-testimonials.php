@@ -36,7 +36,21 @@ get_header(); ?>
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                                             
                         <div class="testimonial-box">
-                            <div class="star-area"><img src="<?php the_field('star_area_testimonials'); ?>" alt=""></div>
+                            <div class="star-area">
+                                <?php if (get_field('review_score') == '4') { ?>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                <?php } elseif (get_field('review_score') == '5') { ?>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                <?php } ?> 
+                            </div>
                             <!-- /.star-area -->
                             <?php the_field('content_testimonial_box_testimonials'); ?>
                             <span class="author"><?php the_title(); ?></span>
