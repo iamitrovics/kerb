@@ -27,10 +27,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                             ?>                               
                             
                              / <?php echo get_the_date( 'F j, Y' ); ?>
-                            <br>
-                            By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
                             </span>
-
+                            <div class="author-desc">
+                                <?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
+                                <div class="author-content">
+                                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
+                                    <p><?php the_author_description(); ?></p>
+                                </div>
+                                <!-- /.author-content -->
+                            </div>
                         </div>
                         <!-- /.blog-meta -->
                         <div class="blog-content">
