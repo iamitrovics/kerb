@@ -496,7 +496,7 @@ h1 {
             white-space: nowrap;
         }
         th {
-            border: 1px solid;
+            border: 1px solid #000;
             background: $yellow;
             color: #fff;
             padding: 3px 10px;
@@ -795,10 +795,6 @@ h1 {
                     height: 52px;
                     line-height: 52px;
                     width: 220px;
-                }
-                &:hover {
-                    background:$black;
-                    color:$white;
                 }
             }
         }
