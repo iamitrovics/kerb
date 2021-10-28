@@ -163,7 +163,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                                                     <div class="featured-article-box">
                                                         <div class="blog-box">
                                                             <div class="blog-photo">
-                                                                <a href="<?php echo get_permalink(); ?>">
+                                                                <a href="<?php echo get_permalink(); ?>" target="_blank">
                                                                     <?php 
                                                                     $values = get_field( 'featured_image_blog' );
                                                                     if ( $values ) { ?>
@@ -184,8 +184,8 @@ $container = get_theme_mod( 'understrap_container_type' );
                                                             </div>
                                                             <!-- /.blog-photo-->
                                                             <div class="blog-content">
-                                                                <h3><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
-                                                                <a href="<?php echo get_permalink(); ?>" class="btn-cta">Read More</a>
+                                                                <h3><a href="<?php echo get_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h3>
+                                                                <a href="<?php echo get_permalink(); ?>" target="_blank" class="btn-cta">Read More</a>
                                                             </div>
                                                             <!-- /.blog-content -->
 
