@@ -172,31 +172,22 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     <?php elseif( get_row_layout() == 'accordion' ): ?>
 
                                         <div class="content__accordion">
-
                                             <h2><?php the_sub_field('accordion_title'); ?></h2>
-
                                             <?php
-
 			                                    // check if the repeater field has rows of data
 			                                    if(have_rows('accordion_list')):
-
 				                                    // loop through the rows of data
 				                                    while(have_rows('accordion_list')) : the_row();
-
                                                         $title = get_sub_field('heading');
 					                                    $content  = get_sub_field('content');
-
 					                                    ?>  
-
 					                                    <div class="faq-wrap">
                                                             <h3><?php echo $title; ?></h3>
                                                             <div>
                                                                 <?php echo $content; ?>
                                                             </div>
                                                         </div>
-
 				                                    <?php endwhile;
-
 			                                    else :
 				                                    echo 'No data';
 			                                    endif;
@@ -205,74 +196,84 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         </div>
                                         <!-- /#faq__accordion -->
 
-                                        <?php elseif( get_row_layout() == 'table' ): ?>
+                                    <?php elseif( get_row_layout() == 'services_module' ): ?>
 
-                                            <table style="width:100%" class="single-table">
-                                                <thead>
-                                                    <tr role="row">
+                                        <div id="services-area">
+                                            <div class="services-in">
+                                                <div class="row">
 
-                                                    <?php
+                                                <?php
+                                                    $post_objects = get_sub_field('services_list_blog_page');
 
-                                                        // check if the repeater field has rows of data
-                                                        if(have_rows('table_head_cells')):
+                                                    if( $post_objects ): ?>
+                                                        <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+                                                            <?php setup_postdata($post); ?>
 
-                                                            // loop through the rows of data
-                                                            while(have_rows('table_head_cells')) : the_row();
+                                                        <div class="service-item">
+                                                            <a href="<?php echo get_permalink(); ?>" target="_blank">
+                                                            <img src="<?php the_field('service_icon_services_page'); ?>" alt="">
+                                                            <span class="service-title"><?php the_title(); ?></span>
+                                                            </a>
+                                                        </div>
+                                                        <!-- /.service-item -->
 
-                                                                $hlabel = get_sub_field('table_cell_label_thead');
+                                                        <?php endforeach; ?>
+                                                    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                                <?php endif; ?>     
 
-                                                                ?>  
+                                                </div>
+                                                <!-- /.row -->
+                                            </div>
+                                            <!-- /.services-in -->
+                                        </div>
+                                        <!-- /#services-area -->
 
-                                                                <th tabindex="0" rowspan="1" colspan="1"><?php echo $hlabel; ?></th>
+                                    <?php elseif( get_row_layout() == 'table' ): ?>
 
-                                                            <?php endwhile;
-
-                                                        else :
-                                                            echo 'No data';
-                                                        endif;
-                                                        ?>
-
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-
-                                                <?php while ( have_posts() ) : the_post(); ?>
-
+                                        <table style="width:100%" class="single-table">
+                                            <thead>
+                                                <tr role="row">
+                                                <?php
+                                                    // check if the repeater field has rows of data
+                                                    if(have_rows('table_head_cells')):
+                                                        // loop through the rows of data
+                                                        while(have_rows('table_head_cells')) : the_row();
+                                                            $hlabel = get_sub_field('table_cell_label_thead');
+                                                            ?>  
+                                                            <th tabindex="0" rowspan="1" colspan="1"><?php echo $hlabel; ?></th>
+                                                        <?php endwhile;
+                                                    else :
+                                                        echo 'No data';
+                                                    endif;
+                                                    ?>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php while ( have_posts() ) : the_post(); ?>
+                                                <?php 
+                                                // check for rows (parent repeater)
+                                                if( have_rows('table_body_row') ): ?>
                                                     <?php 
-
-                                                    // check for rows (parent repeater)
-                                                    if( have_rows('table_body_row') ): ?>
-                                                        
-                                                        <?php 
-
-                                                        // loop through rows (parent repeater)
-                                                        while( have_rows('table_body_row') ): the_row(); ?>
-
-                                                                <?php 
-
-                                                                // check for rows (sub repeater)
-                                                                if( have_rows('table_body_cells') ): ?>
-                                                                    <tr>
-                                                                        <?php 
-
-                                                                        // loop through rows (sub repeater)
-                                                                        while( have_rows('table_body_cells') ): the_row();
-
-                                                                            
-                                                                            ?>
-                                                                            <td><?php the_sub_field('table_cell_label_tbody'); ?></td>
-                                                                        <?php endwhile; ?>
-                                                                    </tr>
-                                                                <?php endif; //if( get_sub_field('') ): ?>
-
-                                                        <?php endwhile; // while( has_sub_field('') ): ?>
-                                                            
-                                                    <?php endif; // if( get_field('') ): ?>
-
-                                                    <?php endwhile; // end of the loop. ?>
-                                                    
-                                                </tbody>
-                                            </table>
+                                                    // loop through rows (parent repeater)
+                                                    while( have_rows('table_body_row') ): the_row(); ?>
+                                                            <?php 
+                                                            // check for rows (sub repeater)
+                                                            if( have_rows('table_body_cells') ): ?>
+                                                                <tr>
+                                                                    <?php 
+                                                                    // loop through rows (sub repeater)
+                                                                    while( have_rows('table_body_cells') ): the_row();
+                                                                        ?>
+                                                                        <td><?php the_sub_field('table_cell_label_tbody'); ?></td>
+                                                                    <?php endwhile; ?>
+                                                                </tr>
+                                                            <?php endif; //if( get_sub_field('') ): ?>
+                                                    <?php endwhile; // while( has_sub_field('') ): ?>
+                                                <?php endif; // if( get_field('') ): ?>
+                                                <?php endwhile; // end of the loop. ?>
+                                                
+                                            </tbody>
+                                        </table>
 
                                     <?php endif; ?>
                                 <?php endwhile; ?>
