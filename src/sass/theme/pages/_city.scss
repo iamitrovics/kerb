@@ -1,0 +1,589 @@
+#city-header {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 657px;
+    @include bp(sm-down) {
+        min-height: 100px;
+    }
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+        > .col,
+        > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .header-caption {
+        background-color: rgba(238,56,0,0.8);
+        text-align: center;
+        padding: 110px 70px;
+        min-height: 657px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include bp(sm-down) {
+            padding: 50px 20px;
+            min-height: 100px;
+        }
+        .heading-title {
+            @include page-title;
+            display: block;
+            color: #fff;
+            line-height: 90%;
+            @include bp(desktop) {
+                font-size: 50px;
+            }
+            @include bp(lg) {
+            }
+            @include bp(md) {
+            }
+            @include bp(sm-down) {
+            }
+        }
+        p {
+            color: #fff;
+            font-family: $lato-reg;
+            font-size: 1.750em;
+            line-height: 1.3;
+            margin-bottom: 38px;
+            @include bp(sm-down) {
+                margin-bottom: 25px;
+            }
+        }
+        a {
+            color: #2e2e2e;
+            text-decoration: none;
+            &:hover {
+                color: $red;
+            }
+        }
+        .trusted-logos {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-left: 17px;
+                    margin-right: 17px;
+                    vertical-align: middle;
+                    margin-bottom: 17px;
+                    a.landing-logo {
+                        display: inline-block;
+                        background: #fff;
+                        height: auto;
+                        width: 80px;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                        img {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#city-intro {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    @include bp(sm-down) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .city-intro-content {
+        text-align: center;
+        h1 {
+            @include heading-font;
+            margin-bottom: 38px;
+            font-family: $lato-reg;
+            text-transform: none;
+            @include bp(sm-down) {
+                margin-bottom: 25px;
+            }
+        }
+        p {
+            @include regular-text;
+            a {
+                color: #2e2e2e;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+    .city-intro-photo {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 0px;
+        height: 0;
+        padding-left: 15px;
+        @include bp(sm-down) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
+    }
+}
+
+#city-services {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 569px;
+    @include bp(sm-down) {
+        min-height: 100px;
+    }
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .row {
+        align-items: center;
+    }
+     .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+        .col-md-5, .col-md-7 {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .city-services-intro {
+        background-color: rgba(238,56,0,0.8) !important;
+        padding: 50px 5% 50px 65px;
+        padding-right: calc(65px + 5%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        min-height: 569px;
+        @include bp(lg) {
+            padding-left: 50px;
+            padding-right: 30px;
+        }
+        @include bp(md) {
+            padding-right: 30px;
+            padding-left: 40px;
+        }
+        @include bp(sm-down) {
+            padding-left: 15px;
+            padding-right: 15px;
+            min-height: 100px;
+        }
+        h2 {
+            @include heading-font;
+            font-family: $lato-reg;
+            margin-bottom: 38px;
+            text-align: center;
+            color: #fff;
+            text-transform: none;
+            @include bp(sm-down) {
+                margin-bottom: 25px;
+            }
+        }
+        p {
+            @include regular-text;
+            color: #fff;
+        }
+    }
+    .city-services-list {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #fff;
+        padding-left: 15px;
+        padding-right: 15px;
+        @media screen and (min-width: 1200px) {
+            @include centre(y);
+            left: -7%;
+            width: 100%;
+            z-index: 10;
+        }
+        .col-md-6 {
+            @include bp(sm-down) {
+                width: 50%;
+            }
+        }
+        .csl-item {
+            margin-bottom: 10px;
+            min-height: 100px;
+            padding: 10px 20px;
+            text-align: center;
+            @include bp(sm-down) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            img {
+                margin-bottom: 20px;
+                width: 100px;
+            }
+            .service-title {
+                display: block;
+                font-size: 13px;
+                line-height: 1.3;
+                font-family: $lato-bold;
+                color: #404040;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                @include animate-fade;
+            }
+            a {
+                &:hover {
+                   .service-title {
+                    color: $red;
+                   } 
+                }
+            }
+        }
+    }
+}
+
+#city-services-description {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    .col-md-6 {
+        @include bp(md-down) {
+            margin-bottom: 35px;
+        }
+    }
+    .csd-item {
+        min-height: 300px;
+        padding: 30px 20px;
+        background-color: #ffffff;
+        width: 100%;
+        transition: background .2s ease-in-out;
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, .32);
+        overflow: hidden;
+        margin-bottom: 35px;
+        @include bp(md-down) {
+            text-align: center;
+            display: flex;
+            align-items: baseline;
+            height: 100%;
+            margin-bottom: 0;
+        }
+        img, h3 {
+            text-align: center;
+        }
+        img {
+            margin-bottom: 20px;
+            @include bp(md-down) {
+                width: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+        }
+        h3 {
+            font-size: 13px;
+            line-height: 1.3;
+            font-family: $lato-bold;
+            color: #404040;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            @include bp(lg) {
+                font-size: 12px;
+            }
+        }
+        p {
+            @incldue regular-text;
+        }
+        a.learn-more {
+            font-size: 13px;
+            line-height: 1.3;
+            font-family: $lato-bold;
+            color: #404040;
+            text-transform: uppercase;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
+
+#testimonials {
+    .city-middle-content {
+        background: rgba(238,56,0,0.8);
+        padding: 40px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        @include bp(sm-down) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        h2 {
+            @include heading-font2;
+            color: #fff;
+            text-align: left;
+            img {
+                display: inline;
+                float: right;
+                margin-left: 1.5em;
+                margin-bottom: 1.5em;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        h3 {
+            @include heading-font3;
+            color: #fff;
+            text-align: left;
+        }
+        p {
+            @include regular-text;
+            color: #fff;
+            text-align: left;
+            a {
+                text-decoration: underline;
+                color: inherit;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        em {
+            font-family: $lato-italic;
+            font-style: normal;
+        }
+        ul {
+            text-align: left;
+            @include list-style;
+            li {
+                color: #fff;
+            }
+        }
+    }
+}
+#city-reviews {
+    padding: 60px 0 60px;
+    background-color: #fafafa;
+    .container {
+        @media (min-width:1600px) {
+            min-width: 1550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .member-area {
+        text-align: center;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        h2 {
+            @include heading-font;
+            color: #000;
+            font-family: $lato-reg;
+            text-transform: none;
+            margin-bottom: 38px;
+            @include bp(sm-down) {
+                margin-bottom: 25px;
+            }
+        }
+        p {
+            @include heading-font4;
+            text-transform: none;
+        }
+        .trusted-logos {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-left: 17px;
+                    margin-right: 17px;
+                    vertical-align: middle;
+                    margin-bottom: 17px;
+                    @include bp(md-down) {
+                        zoom: .8;
+                    }
+                    a.landing-logo {
+                        display: inline-block;
+                        background: #fff;
+                        height: auto;
+                        width: 80px;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                        img {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .review-area {
+        border: 1px solid #e5e5e5;
+        margin: 10px 10px 5px;
+        box-shadow: rgba(0,0,0,.10) 0 0 5px 0;
+        .author-info {
+            background: #fdfdfd;
+            color: #555555;
+            text-align: center;
+            text-shadow: #4c4c4c 1px 1px 0px;
+            border-bottom: 1px solid #e5e5e5;
+            outline: #b2b2b2 0;
+            padding: 30px 0 20px;
+            img {
+                width: 135px;
+                border-radius: 50%;
+                margin-bottom: 16px;
+                height: 135px;
+            }
+            span.author {
+                display: block;
+            }
+        }
+        .review-info {
+            background: #eee;
+            border: 0 #454545;
+            margin: 0;
+            outline: #454545 0;
+            padding: 25px 21px 30px 55px;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 20px;
+                top: 25;
+                background: url(../img/ico/testimonial_quote.png);
+                width: 27px;
+                height: 19px;
+            }
+            p {
+                @include regular-text;
+                color: #555555;
+                font-family: $lato-italic;
+                margin-bottom: 0;
+            }
+            .review-logo {
+                position: absolute;
+                right: 6px;
+                bottom: 6px;
+                height: 32px;
+                a {
+
+                }
+            }
+        }
+    }
+}
+#city-contact {
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+        > .col,
+        > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .city-contact-content {
+        background-color: $red;
+        padding: 50px 5% 50px 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        min-height: 564px;
+        @include bp(lg) {
+            padding-right: 30px;
+        }
+        @include bp(md) {
+            padding-right: 30px;
+            padding-left: 40px;
+        }
+        @include bp(sm-down) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        h2 {
+            @include heading-font;
+            font-family: $lato-reg;
+            margin-bottom: 38px;
+            text-align: center;
+            color: #fff;
+            text-transform: none;
+            @include bp(sm-down) {
+                margin-bottom: 25px;
+            }
+        }
+        p {
+            @include regular-text;
+            color: #fff;
+            strong {
+                font-weight: normal;
+                font-family: $lato-bold;
+            }
+            a {
+                color: inherit;
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+        .contact-info {
+            text-align: center;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .city-map {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        min-height: 564px;
+        iframe {
+            display: block;
+        }
+        .estimate-button {
+            text-align: center;
+            a {
+                font-family: $lato-bold;
+                font-size: 16px;
+                letter-spacing: 2px;
+                display: block;
+                width: 100%;
+                background-color: #8e0505;
+                color: #fff;
+                padding: 28px 36px;
+                font-size: 16px;
+                line-height: 100%;
+                &:hover {
+                    color: #000000;
+                    background-color: #f2f2f2;
+                }
+            }
+        }
+    }
+}
+#cities-contact {
+    background-color: black;
+    text-align: center;
+    h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 25px;
+        color: white;
+    }
+}

@@ -1,0 +1,25 @@
+#testimonials-single {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .testimonial-box {
+        text-align: center;
+        padding: 45px 40px;
+        -webkit-box-shadow: 0 0 10px 0 rgba(175, 185, 203,  .22);
+        box-shadow: 0 0 10px 0 rgba(175, 185, 203,  .22);
+        margin-bottom: 30px;
+
+        .star-area {
+            text-align: center;
+            margin-bottom: 30px;
+            i {
+                color: $yellow;
+            }
+        }
+    }
+}
