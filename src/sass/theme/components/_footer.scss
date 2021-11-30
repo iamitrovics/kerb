@@ -147,10 +147,10 @@ a#go-to-top {
     filter: alpha(opacity=0);
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     position: fixed;
-    right: 20px;
+    left: 20px;
     z-index: 9996;
     display: block;
-    bottom: 72px;
+    bottom: 22px;
     text-align: center;
     -webkit-transition: all ease .3s;
     -moz-transition: all ease .3s;
@@ -158,7 +158,9 @@ a#go-to-top {
     -o-transition: all ease .3s;
     cursor: pointer;
     visibility: hidden;
-
+    @include bp(sm-down) {
+        display: none;
+    }
     i {
         color: #fff;
         font-size: 16px;
@@ -173,4 +175,84 @@ a#go-to-top {
 
 /*=======End of Footer ========*/
 
+// Fixed CTA
+#fixed-cta {
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    background:#ac2801;
+    border-radius: 4px;
+    z-index:9999;
+    animation: pulse 750ms infinite;
+    @include animate-fade;
+    &:hover {
+        background: $yellow;
+        span, small {
+            color:$black;
+        }
+    }
+    @include bp(sm-down) {
+        left:0px;
+        right:auto;
+        bottom:0px;
+        width: 100%;
+        text-align: center;
+    }
+    a {
+        padding-left: 70px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;        
+        @include bp(sm-down) {
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    animation: pulse 1.5s ease infinite;
+    i {
+        font-size: 20px;
+        @include centre(both);
+    }
+    em {
+        background:$orange;
+        display: block;
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        @include centre(y);
+        color:$white;
+        font-size: 24px;
+        left:15px;        
+        @include bp(sm-down) {
+            left:25px;
+        }
+    }
+    span {
+        display: block;
+        text-transform: uppercase;
+        color:$white;
+        font-size: 26px;
+        font-family:$lato-bold;
+        line-height: 1.5;
+    }
+    small {
+        font-size: 18px;
+        color:$white;
+        display: block;
+        line-height: 1;
+    }    
+}
 
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

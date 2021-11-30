@@ -241,6 +241,9 @@ body {
     font-family: $lato-reg;
     bottom: 0;
     padding: 0px 30px;
+    @include bp(sm-down) {
+        display: none;
+    }
     &.slide-up {
         -webkit-animation-name: slideInUp;
         animation-name: slideInUp;

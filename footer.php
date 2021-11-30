@@ -185,6 +185,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <a id="go-to-top" href="javascript:;"><i class="fas fa-chevron-up"></i></a>
 
+	<div id="fixed-cta">
+		
+		<a href="tel:<?php the_field('main_phone_number_options', 'options') ?>">
+			<em><i class="fal fa-phone-alt"></i></em>
+			<div class="phone-text">
+				<small class="label">Get a Free Estimate</small>
+				<span><?php the_field('main_phone_number_options', 'options') ?></span>
+			</div>
+			<!-- // text  -->
+		</a>
+
+	</div>
+	<!-- // fixed cta  -->	
+
 
 	<?php wp_footer(); ?>
 

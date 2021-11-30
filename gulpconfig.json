@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "http://localhost/kerb2/",
+		"proxy": "http://localhost:81/morph/kerb/wpnew/",
 		"notify": false,
 		"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
 	},
