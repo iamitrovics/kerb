@@ -37,7 +37,7 @@ foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
 
-require_once('wp_bootstrap_mobile_navwalker.php');
+require_once('inc/wp_bootstrap_mobile_navwalker.php');
 
 // disable this on publishing
 // remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
