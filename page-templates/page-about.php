@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-lg-12">
                 <div class="header-caption">
-                    <span class="heading-title"><?php the_field('title_hero_about') ?></span>
+                    <h1 class="heading-title"><?php the_field('title_hero_about') ?></h1>
                     <h2 class="h-after"><?php the_field('title_small_hero_about') ?></h2>
                     <?php the_field('hero_paragraph_about') ?>
                 </div>

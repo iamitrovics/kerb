@@ -15,7 +15,7 @@ get_header();
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-caption">
-                        <span class="heading-title"><?php the_field('title_hero_areas_page') ?></span>
+                        <h1 class="heading-title"><?php the_field('title_hero_areas_page') ?></h1>
                         <h2 class="h-after"><?php the_field('title_small_hero_areas_page') ?></h2>
                         <?php the_field('hero_paragraph_areas_page') ?>
                     </div>
