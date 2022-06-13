@@ -206,28 +206,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php the_field('footer_code_snippet', 'options'); ?>
 	<?php endif; ?>
 
-    <div id="kerb-form-container" style="display: none;">
-    <div id='kerb-form-wrapper'>
-      <div id="close-kerb-form">&times;</div>
-    </div>
-  </div>
-  <script>
-    document.getElementById('kerb-form-btn').addEventListener('click', () => {
-      document.getElementById('kerb-form-container').style = ''
-      jQuery('#kerb-form-wrapper').append("<iframe id='kerb-form' src='https://kerb-form.vercel.app/' title='Kerb form'></iframe>")
-        document.body.style.overflow = "hidden"
-    })
-    document.getElementById('close-kerb-form').addEventListener('click', () => {
-      console.log('HOORAAYYYY')
-      document.getElementById('kerb-form-container').style.display = 'none'
-      document.body.style = ""
-      document.getElementById('kerb-form').remove()
-    })
 
-    function closeKerbFormModal() {
-      document.getElementById('kerb-form').remove()
+   <script>
+    if (!sessionStorage.alreadyClicked) {
+        jQuery('#cookie-notice').addClass('slide-up');
+        sessionStorage.alreadyClicked = 1;
     }
-  </script>    
+  </script> 	
 
 </body>
 </html>

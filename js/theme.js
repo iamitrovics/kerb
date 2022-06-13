@@ -7690,7 +7690,6 @@
           $('.menu-overlay').removeClass("active-overlay");
         }
     });
-    $('#cookie-notice').addClass('slide-up');
     $('#close-notice, #accept-cookie').click(function (e) {
       e.preventDefault();
       $("#cookie-notice").removeClass("slide-up");
