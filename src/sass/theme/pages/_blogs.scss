@@ -1200,6 +1200,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb10e', end
                     font-size: 0.7em;
                 }
             }
+            &.current-cat {
+                a {
+                    background-color: $yellow;
+                    color: $black;
+                }
+            }            
         }
     }
 }

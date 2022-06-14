@@ -15,6 +15,23 @@
         </div>
         <!-- /.container -->
     </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="blog-filters">
+                    <ul>
+                        <li><a href="<?php bloginfo('url'); ?>/blog">All</a></li>
+                        <?php wp_list_categories('title_li='); ?>
+                    </ul>
+                </div>
+                <!-- /.blog-filters -->
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+        
     
     <div id="blog-listing">
         <div class="container">
@@ -22,18 +39,7 @@
                 <div class="col-md-12">
                     <div class="blog-listing-content">
 
-                    <?php
-                        $current_page = (get_query_var('paged')) ? get_query_var('paged') : 1; // get current page number
-                        $args = array(
-                            'posts_per_page' => 10, // the value from Settings > Reading by default
-                            'paged'          => $current_page // current page
-                        );
-                        query_posts( $args );
-                        
-                        $wp_query->is_archive = true;
-                        $wp_query->is_home = false;
-                        
-                        while(have_posts()): the_post(); ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
                                                 
                                     <div class="blog-box">
                                         <div class="blog-photo">
@@ -81,7 +87,7 @@
 
                                     </div>
                           
-                        <?php endwhile; ?>
+                                <?php endwhile; // end of the loop. ?> 
 
                         <div class="custom-pager">
                             <?php if( function_exists('wp_pagenavi') ) wp_pagenavi(); // WP-PageNavi function ?>
