@@ -32,19 +32,11 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Lato Italic';
-    src: url('../fonts/Lato-Italic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
 
 $lato-bold: 'Lato Bold';
 $lato-semi: 'Lato Semibold';
 $lato-reg: 'Lato Regular';
 $lato-black: 'Lato Black';
-$lato-italic: 'Lato Italic';
 
 $font-main: 'Lato Regular';
 $font-heading: 'Lato Bold';

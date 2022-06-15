@@ -1,4 +1,5 @@
 #masheader {
+    background: url('../img/bg/kerb-moving-bg.webp');
     background-position: center;
     background-size: cover;
     height: auto;
@@ -6,7 +7,12 @@
     padding-top: 250px;
     padding-bottom: 100px;
     min-height: 70vh;
-
+    @include bp(md-down) {
+        background: url('../img/bg/kerb-mobile-bg.webp');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;        
+    }
     @media (max-width: 992px) {
         padding-top: 190px;
     }

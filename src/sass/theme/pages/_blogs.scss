@@ -473,7 +473,8 @@ h1 {
 
         em {
             font-style: normal;
-            font-family: $lato-italic;
+            font-family: $font-main;
+            font-style: italic;
             font-weight: bold !important;
         }
     }
@@ -501,7 +502,8 @@ h1 {
 
             em {
                 font-style: normal;
-                font-family: $lato-italic;
+                font-family: $font-main;
+                font-style: italic;
             }
         }
     }
@@ -547,7 +549,8 @@ h1 {
 
         span {
             @include regular-text;
-            font-family: $lato-italic;
+            font-family: $font-main;
+            font-style: italic;
             color: #585858;
         }
     }

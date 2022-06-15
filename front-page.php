@@ -4,7 +4,7 @@
 **/
 get_header(); ?>
 
-   <header id="masheader" style="background-image: url(<?php the_field('background_image_hero_home') ?>)">
+   <header id="masheader">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
