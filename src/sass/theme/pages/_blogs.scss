@@ -508,6 +508,30 @@ h1 {
         }
     }
 
+    .intro-text {
+        margin-bottom: 40px;
+        p {
+            font-size: 24px;
+            @include bp(sm-down) {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .full-content {
+        margin-bottom: 40px;
+        @include bp(sm-down) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .content-service--wrapper {
+        margin-bottom: 40px;
+        @include bp(sm-down) {
+            margin-bottom: 25px;
+        }        
+    }
+
     .video-holder {
         margin-bottom: 20px;
         position: relative;
@@ -570,14 +594,17 @@ h1 {
 
         .featured-photo {
             width: 100%;
-            margin-bottom: 20px;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
+            @include bp(sm-down) {
+                margin-bottom: 20px;
+            }
             img {
                 width: 100%;
                 display: block;
                 @include animate-fade;
+                object-fit: cover;
             }
             .caption {
                 padding-top: 10px;
@@ -687,6 +714,15 @@ h1 {
                 border-top: 0;
                 .faq-content {
                     display: none;
+                    p {
+                        a {
+                            color:$orange;
+                            text-decoration: underline;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -1210,5 +1246,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb10e', end
                 }
             }            
         }
+    }
+}
+
+.half-content {
+    h2, h3 {
+        margin-top: 0px!important;
     }
 }

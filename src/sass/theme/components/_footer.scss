@@ -211,6 +211,9 @@ a#go-to-top {
         }
     }
     animation: pulse 1.5s ease infinite;
+    @include bp(sm-down) {
+        animation: none!important;
+    }
     i {
         font-size: 20px;
         @include centre(both);
