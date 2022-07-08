@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div id="blog-page" class="cities-ctp">
     <div class="container">
         <div class="row">
-            <div class="col-md-10 offset-md-1">
+            <div class="col-md-12">
                 <div class="blog-body">
                         
                     <div class="blog-content">
@@ -101,6 +101,56 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                                     </div>
                                     <!-- /.half-width-image -->
+
+                        <?php elseif( get_row_layout() == 'image_left_text_right' ): ?>
+
+                            <div class="content-main-wrapper">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="image-holder">
+                                            <?php
+                                            $imageID = get_sub_field('featured_image');
+                                            $image = wp_get_attachment_image_src( $imageID, 'why-image' );
+                                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                            ?> 
+
+                                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                                        </div>
+                                    </div>
+                                    <!-- // image  -->
+                                    <div class="col-lg-6">
+                                        <div class="content-block">
+                                            <?php the_sub_field('content_block'); ?>
+                                        </div>
+                                    </div>
+                                    <!-- // col block  -->
+                                </div>
+                            </div>
+
+                            <?php elseif( get_row_layout() == 'image_right_text_left' ): ?>
+
+                                <div class="content-main-wrapper">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="content-block">
+                                                <?php the_sub_field('content_block'); ?>
+                                            </div>
+                                        </div>
+                                        <!-- // col block  -->
+                                        <div class="col-lg-6">
+                                            <div class="image-holder">
+                                                <?php
+                                                $imageID = get_sub_field('featured_image');
+                                                $image = wp_get_attachment_image_src( $imageID, 'why-image' );
+                                                $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                                ?> 
+
+                                                <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                                            </div>
+                                        </div>
+                                        <!-- // image  -->                            
+                                    </div>
+                                </div>                                      
 
                                 <?php elseif( get_row_layout() == 'quote' ): ?>
 

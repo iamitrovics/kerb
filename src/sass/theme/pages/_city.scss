@@ -588,3 +588,13 @@
         color: white;
     }
 }
+
+.content-main-wrapper  {
+    margin-bottom: 40px;
+    .image-holder {
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
