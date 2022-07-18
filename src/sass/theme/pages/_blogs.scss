@@ -158,7 +158,7 @@ h1 {
                     color: #fff;
                     text-transform: uppercase;
                     padding: 14px 24px;
-                    font-size: 12px;
+                    font-size: 16px;
                     line-height: 100%;
                     font-family: $lato-bold;
                     border-radius: 3px;
@@ -353,6 +353,9 @@ h1 {
     }
 }
 .similar-posts {
+    @include bp(sm-down) {
+        padding-top: 50px;
+    }
     &.first-child-box {
         padding-bottom: 0;
     }
@@ -363,6 +366,7 @@ h1 {
     }
     h3 {
         font-size: 1.5rem !important;
+        margin-bottom: 30px;
         a {
             color: #404040;
         }
@@ -408,6 +412,9 @@ h1 {
         .blog-content {
             width: 100% !important;
             padding: 0 !important;
+            @include bp(sm-down) {
+                padding-top: 25px!important;
+            }
             .blog-date {
                 margin: 10px 0;
             }
@@ -435,7 +442,7 @@ h1 {
 
     @include bp(sm-down) {
         padding-top: 30px;
-        padding-bottom: 0px;
+        padding-bottom: 50px;
         margin-top: 120px;
     }
 
@@ -570,12 +577,13 @@ h1 {
     .photo-caption {
         padding: 10px;
         text-align: center;
-
+        font-size: 18px;
         span {
             @include regular-text;
             font-family: $font-main;
             font-style: italic;
             color: #585858;
+            font-size: 18px;
         }
     }
 
@@ -585,6 +593,7 @@ h1 {
         h1 {
             @include bp(sm-down) {
                 font-size: 2rem;
+                margin-bottom: 30px;
             }
         }
 
@@ -597,6 +606,7 @@ h1 {
             margin-left: auto;
             margin-right: auto;
             text-align: center;
+            margin-bottom: 40px;
             @include bp(sm-down) {
                 margin-bottom: 20px;
             }
@@ -608,13 +618,16 @@ h1 {
             }
             .caption {
                 padding-top: 10px;
+                font-size: 18px;
+                display: block;
+                line-height: 1.3;
             }
         }
 
         .half-width-image {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
 
             .featured-photo.half-content {
                 width: 49%;
@@ -640,7 +653,7 @@ h1 {
         .blog-meta {
             span {
                 display: block;
-                font-size: 14px;
+                font-size: 17px;
                 color: #777777;
                 font-weight: normal;
                 line-height: 1.66;
@@ -661,10 +674,11 @@ h1 {
                     align-self: center;
                     a {
                         color:$yellow;
+                        font-size: 18px;
                     }
                     p {
                         margin-bottom: 0;
-                        font-size: 12px;
+                        font-size: 16px;
                         font-style: italic;
                         line-height: 1.3;
                     }

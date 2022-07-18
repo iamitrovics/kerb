@@ -4,7 +4,9 @@
 #page-footer {
     background-color: #fafafa;
     padding-top: 55px;
-
+    @include bp(sm-down) {
+        padding-bottom: 80px;
+    }
     .footer-top {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -35,15 +37,18 @@
 
         p {
             margin-bottom: 0;
+            color:$black;
         }
 
         small {
             font-family: $lato-semi;
-            font-size: 11px;
+            font-size: 14px;
             line-height: 1.45;
             letter-spacing: 1px;
-            color: #ccc;
-
+            color: $black;
+            @include bp(sm-down) {
+                font-size: 16px;
+            }
             a {
                 font-family: $lato-bold;
                 color: inherit;
@@ -56,7 +61,7 @@
     }
 
     .footer-title {
-        font-size: 14px;
+        font-size: 16px;
         font-family: $lato-black;
         text-transform: uppercase;
         color: #999;
@@ -72,11 +77,12 @@
             li {
                 a {
                     display: inline-block;
-                    font-size: 13px;
+                    font-size: 16px;
                     line-height: 1.85;
                     font-family: $lato-reg;
                     padding: 7px 25px 7px 20px;
-                    color: #999;
+                    padding-left: 30px;
+                    color: $black;
                     position: relative;
 
                     &:before {
@@ -84,7 +90,7 @@
                         @include animate-fade;
                         position: absolute;
                         left: 10px;
-                        top: 11px;
+                        top: 15px;
                         font-size: 15px;
                         color: #999;
                         content: "\e907";
